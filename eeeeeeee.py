@@ -1,6 +1,6 @@
 from manim import *
 
-class eeeeeeeeeeeeeeee(Scene):
+class intro(Scene):
     def construct(self):
         a = Circle()
         text1 = Text("this is the video animation compilation.", color=GRAY)
@@ -22,3 +22,15 @@ class eeeeeeeeeeeeeeee(Scene):
         self.wait(2)
         self.play(Write(credits))
         self.wait(1)
+class outro(Scene):
+    def construct(self):
+        txt = Text("This is the end of the video.\n I hope you enjoyed it.", color=GREEN)
+        txt.scale(1.3).shift(UP*2)
+        txt2 = Text("Note: the music is from ncs. \n thanks for alan walker.", color=GOLD)
+        txt2.scale(1).shift(DOWN*2)
+        self.play(Write(txt))
+        self.wait(2)
+        self.play(Write(txt2))
+        self.wait(2)
+        self.play(FadeOut(txt), FadeOut(txt2))
+        self.wait(2)
