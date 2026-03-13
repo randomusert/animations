@@ -10,7 +10,7 @@ def run_manim_command(script_path, class_name):
 
     try:
         # Construct the Manim command
-        command = f"manim -pql {script_path} {class_name}"
+        command = f"manim -pqp {script_path} {class_name}"
         
         # Run the Manim command
         result = subprocess.check_output(command, shell=True, text=True)
